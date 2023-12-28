@@ -359,7 +359,7 @@ def export_imgs_database_into_html(imgs_database):
         write_text(html, encoding='utf-8')
 
 if __name__ == '__main__':
-    newest_imgs_url_list = get_newest_images_url_list(from_local=True)
+    newest_imgs_url_list = get_newest_images_url_list(from_local=False)
     imgs_database = update_imgs_resource_database(newest_imgs_url_list)
     imgs_database = download_images_database_by_threadpool(imgs_database)
     export_imgs_database_into_html(imgs_database)
