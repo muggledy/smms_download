@@ -13,7 +13,7 @@ import requests, time, random, pickle, os, re, yaml
 def get_absolute_path(relative_path):
     absolute_path = \
         os.path.normpath(os.path.join(\
-        os.path.dirname(__file__), relative_path))
+        os.path.dirname(os.path.abspath(__file__)), relative_path))
     parent_dir = os.path.dirname(absolute_path)
     if not os.path.exists(parent_dir):
         print(f'Info: create dir {parent_dir}')
